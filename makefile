@@ -25,7 +25,7 @@ $(TARGET): $(OBJS)
 	@echo Linking [$@]
 	@$(CXX) -o $@ $^ $(CXXFLAGS) $(LDLIBS) $(LDFLAGS) 
 
-$(DIR_OBJ)/%.o: ./src/%.cc
+$(DIR_OBJ)/%.o: ./src/%.cpp
 	@echo Compiling [$@]
 	@mkdir -p $(DIR_OBJ)
 	@$(CXX) -c -o $@ $< $(CXXFLAGS) $(INCLUDES)
